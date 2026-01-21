@@ -1,7 +1,7 @@
 interface Person {
   firstName?: string;
   lastName?: string;
-  age?: number;
+  age: number;
 }
 
 function sortPersons(persons: Person[]): Person[] {
@@ -16,12 +16,7 @@ function sortPersons(persons: Person[]): Person[] {
       });
     }
   }
-  return result.map((a,b) => {
-    if(a !== undefined && b !== undefined){
-      return result;
-    }
-    return undefined;
-  }).filter((a,b) => a.age - b.age);
+  return result.sort((a,b) => a.age - b.age);
 }
 
 
