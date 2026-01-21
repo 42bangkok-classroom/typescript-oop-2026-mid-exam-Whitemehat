@@ -1,7 +1,7 @@
 export interface Person {
   firstName?: string;
   lastName?: string;
-  age?: number;
+  age: number;
 }
 
 function sortPersons(persons: Person[]): Person[] {
@@ -16,7 +16,12 @@ function sortPersons(persons: Person[]): Person[] {
       });
     }
   }
-  return result.sort((a,b) => a.age - b.age);
+  if(result){
+    return result.sort((a,b) => a.age - b.age);
+  }
+  else{
+    return [];
+  }
 }
 
 
