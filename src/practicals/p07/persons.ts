@@ -16,7 +16,12 @@ function sortPersons(persons: Person[]): Person[] {
       });
     }
   }
-  return result.filter((a,b) => a.age - b.age);
+  return result.map((a,b) => {
+    if(a !== undefined && b !== undefined){
+      return result;
+    }
+    return undefined;
+  }).filter((a,b) => a.age - b.age);
 }
 
 
@@ -29,3 +34,6 @@ const persons: Person[] = [
   { firstName: "Jane", lastName: "Smith", age: -5 },
   { lastName: "NoName", age: 40 }
 ];
+
+const r = sortPersons(persons);
+console.log(r);
