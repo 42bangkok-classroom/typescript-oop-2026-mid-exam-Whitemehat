@@ -11,7 +11,12 @@ function getUniqueNumbers(arr1: number[], arr2: number[]): number[] {
       arr_r.push(n2);
     }
   }
-  return arr_r;
+  if(!arr_r){
+    return [];
+  }
+  else{
+    return arr_r;
+  }
 }
 
 const arr1 = [1, 2, 3, 4];
