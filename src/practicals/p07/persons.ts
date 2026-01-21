@@ -4,7 +4,20 @@ interface Person {
   age?: number;
 }
 
-function sortPersons(persons: Person[]): Person[] {}
+function sortPersons(persons: Person[]): Person[] {
+  let result : Person[] = [];
+  for(const p of persons){
+    if(!p.firstName || !p.lastName || !p.age || p.age < 0|| p.age > 100) continue;
+    else {
+      result.push({
+        firstName: p.firstName,
+        lastName: p.lastName,
+        age: p.age
+      });
+    }
+    return result.filter((a,b) => a.age - b.age);
+  }
+}
 
 
 const persons: Person[] = [
