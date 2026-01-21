@@ -15,8 +15,8 @@ function sortPersons(persons: Person[]): Person[] {
         age: p.age
       });
     }
-    return result.filter((a,b) => a.age - b.age);
   }
+  return result.filter((a,b) => a.age - b.age);
 }
 
 
