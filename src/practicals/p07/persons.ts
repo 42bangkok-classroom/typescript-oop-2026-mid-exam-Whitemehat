@@ -4,7 +4,7 @@ export interface Person {
   age?: number;
 }
 
-function sortPersons(persons: Person[]): Person[] {
+export function sortPersons(persons: Person[]): Person[] {
   let result : Person[] = [];
   for(const p of persons){
     if(!p.firstName || !p.lastName || !p.age || p.age < 0|| p.age > 100) continue;
