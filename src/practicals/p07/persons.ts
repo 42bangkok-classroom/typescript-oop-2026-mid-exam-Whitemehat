@@ -1,7 +1,7 @@
 export interface Person {
   firstName?: string;
   lastName?: string;
-  age: number;
+  age?: number;
 }
 
 function sortPersons(persons: Person[]): Person[] {
@@ -9,6 +9,7 @@ function sortPersons(persons: Person[]): Person[] {
   for(const p of persons){
     if(!p.firstName || !p.lastName || !p.age || p.age < 0|| p.age > 100) continue;
     else {
+      if(p.age !== undefined)
       result.push({
         firstName: p.firstName,
         lastName: p.lastName,
