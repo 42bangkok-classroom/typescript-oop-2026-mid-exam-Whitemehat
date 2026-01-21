@@ -20,7 +20,7 @@ function sortPersons(persons: Person[]): Person[] {
 }
 
 
-const persons: Person[] = [
+export const persons: Person[] = [
   { firstName: "Somchai", lastName: "Jaidee", age: 30 },
   { firstName: "", lastName: "Test", age: 20 },
   { firstName: "Anan", lastName: "Sukjai", age: 25 },
