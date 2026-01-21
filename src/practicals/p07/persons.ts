@@ -1,7 +1,7 @@
 export interface Person {
   firstName?: string;
   lastName?: string;
-  age: number;
+  age?: number;
 }
 
 function sortPersons(persons: Person[]): Person[] {
